@@ -1,0 +1,21 @@
+{
+    "environmentSettings": {
+        "webSite": {
+            "name": "ISLA2",
+            "location": "Australia Southeast"
+        },
+        "databases": [
+            {
+                "connectionStringName": "DefaultConnection",
+                "databaseName": "ISLA2_db",
+                "serverName": "r6jgtkayp8",
+                "user": "EDA",
+                "password": "",
+                "edition": "",
+                "size": "",
+                "collation": "",
+                "location": "Australia Southeast"
+            }
+        ]
+    }
+}
