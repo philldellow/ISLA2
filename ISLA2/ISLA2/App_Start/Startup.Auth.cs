@@ -58,11 +58,11 @@ namespace ISLA2
                appId: "354993728024770",
                appSecret: "07d0133077303a102441c16168ebf353");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "847827442878-nn14i5v25snnst2gc61qrkrsp6dkthcc.apps.googleusercontent.com",
+                ClientSecret = "EIibToN31RcfmKwF0b84qq_D"
+            });
         }
     }
 }
