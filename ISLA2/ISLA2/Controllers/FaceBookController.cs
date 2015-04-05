@@ -27,7 +27,7 @@ namespace ISLA2.Controllers
         public string FBFeed()
         {   MyFB.FacebookFeed("now we see");
             var client = new FacebookClient();
-            dynamic me = client.Get("zuck")
+            dynamic me = client.Get("zuck");
             return me;
         }
 
