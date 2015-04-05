@@ -8,6 +8,8 @@ using ISLA2.Models;
 
 namespace ISLA2.Controllers
 {
+
+
     public class FaceBookController : ApiController
     {
         //// GET: api/Engine
@@ -18,7 +20,7 @@ namespace ISLA2.Controllers
         //    return reply;
         //}
 
-        // GET: api/Engine/start
+        // GET: api/Facebook/feed
         [Route("api/Facebook/feed")]
         [AcceptVerbs("GET")]
         public string FBFeed()
@@ -26,14 +28,15 @@ namespace ISLA2.Controllers
             return MyFB.FacebookFeed("now we see");
         }
 
-//        // POST: api/Engine
-//        [Route("api/Engine/")]
-//        [AcceptVerbs("POST")]
-//        public string Post([FromBody] Guess Guess)
-//        {
-//            return Engine.FindClue(Guess);
+        // POST: api/Facebook/feed
+        [Route("api/Facebook/feed")]
+        [AcceptVerbs("POST")]
+        public string Post([FromBody] string FacebookFeedPost)
+        {
+            return MyFB.FacebookFeedPost(FacebookFeedPost);
 
-//        }
+        }
+
 //        // GET: api/Engine/5
 //        public string Get(int id)
 //        {

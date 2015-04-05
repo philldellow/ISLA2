@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Facebook;
 
 namespace ISLA2.Controllers
 {
@@ -27,5 +28,30 @@ namespace ISLA2.Controllers
 
             return View();
         }
+
+        public ActionResult UserInfo(string accessToken)
+        {
+            var client = new FacebookClient(accessToken);
+            dynamic result = client.Get("me", new { fields = "name,id" });
+
+            return Json(new
+            {
+                id = result.id,
+                name = result.name,
+            });
+        }
+
+        public ActionResult UserInfo()
+        {
+            var accessToken = Session["AccessToken"].ToString();
+            var client = new FacebookClient(accessToken);
+            dynamic result = client.Get("me", new { fields = "name,id" });
+            return Json(new
+            {
+                id = result.id,
+                name = result.name,
+            });
+        }
+
     }
 }
