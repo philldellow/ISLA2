@@ -25,7 +25,7 @@ namespace ISLA2.Controllers
         [Route("api/Facebook/feed")]
         [AcceptVerbs("GET")]
         public string FBFeed()
-        {   MyFB.FacebookFeed("now we see");
+        {   //MyFB.FacebookFeed("now we see");
             var client = new FacebookClient();
             dynamic me = client.Get("zuck");
             return me;
