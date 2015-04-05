@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Facebook;
 using ISLA2.Models;
 
 namespace ISLA2.Controllers
@@ -24,8 +25,10 @@ namespace ISLA2.Controllers
         [Route("api/Facebook/feed")]
         [AcceptVerbs("GET")]
         public string FBFeed()
-        {
-            return MyFB.FacebookFeed("now we see");
+        {   MyFB.FacebookFeed("now we see");
+            var client = new FacebookClient();
+            dynamic me = client.Get("zuck")
+            return me;
         }
 
         // POST: api/Facebook/feed

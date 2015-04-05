@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Facebook;
+using Microsoft.Owin.Security.Google;
 
 namespace ISLA2.Controllers
 {
@@ -51,7 +52,6 @@ namespace ISLA2.Controllers
                 id = result.id,
                 name = result.name,
             });
-        }
-
+        }     
     }
 }
